@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Reflection.Metadata;
 
 namespace Time_and_Sound
 {
@@ -13,14 +14,14 @@ namespace Time_and_Sound
         Texture2D bomb, pilers, boom, reset;
         SpriteFont font;    
         SoundEffect explode;
-        
-
 
         Rectangle bombRectangle;
         MouseState mouseState;
         int kaBoom = 0;
         float seconds;
         bool explosionVisible = false;
+
+        Vector2 GreenWire = new Vector2(50, 50);
 
         public Game1()
         {
@@ -106,7 +107,8 @@ namespace Time_and_Sound
             //pilers follow mouse using mousestate
             _spriteBatch.Draw(pilers, new Rectangle((mouseState.X), (mouseState.Y), 100, 100), Color.White);
 
-            //draw rect for the red and and the green fire and make it stop or explode when cutting
+            //draw rect for the red and and the green wire and make it stop or explode when cutting
+
 
 
             _spriteBatch.End();
